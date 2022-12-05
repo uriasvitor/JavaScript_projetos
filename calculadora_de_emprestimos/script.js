@@ -177,7 +177,7 @@ function chart(principal, interest, monthly, payments){
 
         if(year == 1 ) g.fillText("year", x ,y-5)
 
-        if(year % 5 == 0  && year*12 !== payments) g.fillText(String(Year), x, y-5)
+        if(year % 5 == 0  && year * 12 !== payments) g.fillText(String(Year), x, y-5)
         
     }
 
