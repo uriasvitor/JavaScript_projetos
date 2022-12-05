@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #FFD8CB;
+}
+
+.quiz-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.box-size{
+    background-color: #3EADCF;
+    width: 1200px;
+    height: 100%;
+    border-radius: 32px;
+    box-shadow: 0px 2px 8px 0px;
+}
+
+span{
+    font: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #A88BEB;
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 30%;
+}
+.question{
+    width: 100%;
+    text-align: center;
+    
+}
+
+#title-question{
+    font-size: 25px;
+    color: aliceblue;
+    text-shadow: 2px 2px black;
+    margin-top: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.answer{
+    display: flex;
+}
+
+.answers{
+    display: flex;
+    padding: 0 30px;
+}
+
+.answers{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+
+input[type="radio"]{
+    margin-top: 40px;
+    border: #A88BEB;
+}
+
+button{
+    margin: 22px 22px;
+    margin-left: 30px;
+    width: 120px;
+    border: 0;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: #00f5ab;
+}
+
