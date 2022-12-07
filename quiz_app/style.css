@@ -7,7 +7,7 @@ body{
     background-color: #FFD8CB;
 }
 
-.quiz-box{
+.quiz{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,15 +22,20 @@ body{
     box-shadow: 0px 2px 8px 0px;
 }
 
-span{
-    font: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #A88BEB;
+#question_number{
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #0059ff;
     background-color: aliceblue;
     padding: 10px;
+    font-weight: 900;
     border-radius: 30%;
+    margin: 10px 20px 0 20px;
 }
 .question{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     width: 100%;
     text-align: center;
     
@@ -40,21 +45,18 @@ span{
     font-size: 25px;
     color: aliceblue;
     text-shadow: 2px 2px black;
-    margin-top: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.answer{
+.answers{
     display: flex;
 }
 
-.answers{
+
+
+.output{
     display: flex;
     padding: 0 30px;
-}
-
-.answers{
-    display: flex;
     flex-direction: column;
     font-size: 20px;
     color: white;
@@ -78,5 +80,31 @@ button{
     text-align: center;
     color: rgb(255, 255, 255);
     background-color: #00f5ab;
+}
+
+p{
+    margin-top: 20px;
+}
+
+button:disabled{
+    cursor: not-allowed;
+    background-color: #888888;
+}
+
+#answers{
+    margin-left: 30px;
+}
+
+label{
+    font-size: 22px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.controls{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
