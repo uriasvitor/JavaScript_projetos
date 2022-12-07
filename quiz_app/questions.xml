@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<questions>
+    <asks>
+        <number>01</number>
+        <title>Quais são as cores da bandeira do Brasil?</title>
+        <answers>
+            <a value="false">Verde, Vermelho, Amarelo </a>
+            <b value="false">Preto, Verde, Amarelo</b>
+            <c value="true">Verde, Azul, Amarelo</c>
+            <d value="false">Azul, vermelho, branco</d>
+        </answers>
+    </asks>
+    <asks>
+        <number>02</number>
+        <title>Que dia é o dia da idependencia do Brasil ?</title>
+        <answers>
+            <a value="true">Dia 7 de Setembro </a>
+            <b value="false">Dia 16 de julho </b>
+            <c value="false"> Dia 12 de outubro</c>
+            <d value="false">Dia 18 de maio</d>
+        </answers>
+    </asks>
+    <asks>
+        <number>03</number>
+        <title>Quantos estados tem o Brasil?</title>
+        <answers>
+            <a value="false">24</a>
+            <b value="true" >26</b>
+            <c value="false">30</c>
+            <d value="false">22</d>
+        </answers>
+    </asks>
+    <asks>
+        <number>04</number>
+        <title>Quantas copas o Brasil tem ?</title>
+        <answers>
+            <a value="false">2</a>
+            <b value="false">4</b>
+            <c value="false">3</c>
+            <d value="true">Acima de 4 Copas</d>
+        </answers>
+    </asks>
+</questions>
