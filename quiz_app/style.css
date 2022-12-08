@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: #FFD8CB;
+    background-color: #10000d;
 }
 
 .quiz{
@@ -19,7 +19,10 @@ body{
     width: 1200px;
     height: 100%;
     border-radius: 32px;
-    box-shadow: 0px 2px 8px 0px;
+    box-shadow:
+    0 0 1px 2px #fff,
+    0 0 1px 2px rgb(0, 204, 255),
+    0 0 20px 10px #0ff;
 }
 
 #question_number{
@@ -32,6 +35,7 @@ body{
     border-radius: 30%;
     margin: 10px 20px 0 20px;
 }
+
 .question{
     display: flex;
     align-items: flex-end;
@@ -52,8 +56,6 @@ body{
     display: flex;
 }
 
-
-
 .output{
     display: flex;
     padding: 0 30px;
@@ -64,7 +66,6 @@ body{
 
 }
 
-
 input[type="radio"]{
     margin-top: 40px;
     border: #A88BEB;
@@ -73,13 +74,16 @@ input[type="radio"]{
 button{
     margin: 22px 22px;
     margin-left: 30px;
-    width: 120px;
+    width: 220px;
     border: 0;
     height: 35px;
     font-size: 20px;
     text-align: center;
     color: rgb(255, 255, 255);
+    border-radius: 12px;
     background-color: #00f5ab;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px black;
 }
 
 p{
@@ -99,6 +103,7 @@ label{
     font-size: 22px;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px rgb(0, 103, 221);
 
 }
 
@@ -114,5 +119,4 @@ label{
     font-size: 42px;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
 }
