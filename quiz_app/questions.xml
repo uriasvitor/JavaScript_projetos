@@ -51,4 +51,54 @@
             <d value="true">Azul</d>
         </answers>
     </asks>
+    <asks>
+        <number>06</number>
+        <title>O sol é uma...</title>
+        <answers>
+            <a value="false">Satélite</a>
+            <b value="true">Estrela</b>
+            <c value="false">Planeta</c>
+            <d value="false">Atmosfera</d>
+        </answers>
+    </asks>
+    <asks>
+        <number>07</number>
+        <title>A lua é um...</title>
+        <answers>
+            <a value="false">Estrela</a>
+            <b value="false">Atmosfera</b>
+            <c value="false">Planeta</c>
+            <d value="true">Satélite</d>
+        </answers>
+    </asks>
+    <asks>
+        <number>08</number>
+        <title>Quanto é !5 (fatorial)</title>
+        <answers>
+            <a value="true">120</a>
+            <b value="false">25</b>
+            <c value="false">125</c>
+            <d value="false">10</d>
+        </answers>
+    </asks>
+    <asks>
+        <number>09</number>
+        <title>Qual a cor do oceano ?</title>
+        <answers>
+            <a value="false">Amarelo</a>
+            <b value="false">Roxo</b>
+            <c value="false">Preto</c>
+            <d value="true">Azul</d>
+        </answers>
+    </asks>
+    <asks>
+        <number>10</number>
+        <title>Getúlio Vargas foi eleito presidente em</title>
+        <answers>
+            <a value="false">1980</a>
+            <b value="false">1964</b>
+            <c value="false">1890</c>
+            <d value="true">1934</d>
+        </answers>
+    </asks>
 </questions>

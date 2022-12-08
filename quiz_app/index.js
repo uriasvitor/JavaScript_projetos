@@ -110,8 +110,7 @@ var current_question = 0
     function restartQuiz(){
         question_number.style   = "display:block";
 
-
-        current_question        = 0;
+        current_question = 0;
 
         btn_restart.remove()
         createConfirmBtn()
@@ -123,9 +122,6 @@ var current_question = 0
     function answerCalculate(current_response){
         const value = xml_alternatives[current_response].attributes[0].nodeValue
         answer_val = value
-
-
-        console.log(answer_val)
     }
 
     function quizResult(){
@@ -133,15 +129,18 @@ var current_question = 0
         btn_confirm.remove()
         createRestartBtn()
         
-        score_value = score.filter(Boolean).length
+        const score_value = score
 
-        console.log(score_value)
+        const corrects_answers = score_value.filter((correct)=>{
+            return correct == "true"
+        })
+
         question_number.style = "display:none"
         question_title.innerHTML = 'Sua pontuação foi de: '
-        result.innerHTML = `${score_value} + pontos`
+        result.innerHTML = `${corrects_answers.length} de ${xml_questions.length} Pontos`
 
-        if(score_value > 8){
-            result.innerHTML = 'Muito bom!'
+        if(corrects_answers.length > 6){
+            result.appendChild(document.createElement("div")).innerHTML = 'Muito bom!'
         }
 
 
