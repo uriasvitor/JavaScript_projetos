@@ -1,9 +1,12 @@
 var question_number = document.getElementById("question_number")
 var question_title  = document.getElementById("title-question")
-var btn_confirm = document.getElementById("btn_confirm")
-var btn_restart = document.getElementById("btn_restart")
-var controls    = document.querySelector(".controls")
-    
+var btn_confirm     = document.getElementById("btn_confirm")
+var controls        = document.querySelector(".controls")
+var answers         = document.getElementById("answers")
+var result          = document.getElementById("result")
+var answer_val      = ''
+var score           = []
+
 var current_question = 0
 
     let url = "./questions.xml"
@@ -14,48 +17,47 @@ var current_question = 0
     }).then(data =>{
         let parser = new DOMParser()
         xmlDoc = parser.parseFromString(data, 'text/html')
-        questions = xmlDoc.getElementsByTagName("asks");
-
         createQuestion()
 
     }).catch((err)=>{
-        console.log("Arquivo XML não foi encontrado!")
+        console.log("Arquivo XML não foi encontrado!" + err)
     })
     
     function createQuestion(){
         
-        xml_number = xmlDoc.getElementsByTagName("number")[current_question].innerHTML
-        xml_title = xmlDoc.getElementsByTagName("title")[current_question].innerHTML
-        xml_alternatives = xmlDoc.getElementsByTagName("answers")[current_question].children
-        console.log(xml_alternatives)
-        question_number.innerHTML = xml_number    
-        question_title.innerHTML = xml_title
-        
+        xml_questions       = xmlDoc.getElementsByTagName("asks");
+        xml_number          = xmlDoc.getElementsByTagName("number")[current_question].innerHTML
+        xml_title           = xmlDoc.getElementsByTagName("title")[current_question].innerHTML
+        xml_alternatives    = xmlDoc.getElementsByTagName("answers")[current_question].children
+
+        question_title.innerHTML    = xml_title
+        question_number.innerHTML   = xml_number    
+
         for(var i = 0; i < xml_alternatives.length; i++){
-            document.getElementById("answers")
-                .appendChild(document.createElement("div")).innerHTML = 
-                `<input type='radio' name='alternative' id='${i}' onchange="checkIsValid()" ><label for='${i}'>
-                ${xml_alternatives[i].innerHTML}</label>`
+            answers.appendChild(document.createElement("div")).innerHTML = 
+                `<input type='radio' name='alternative' id='${i}' value='${i}' onchange="checkIsValid(${i})">
+                <label for='${i}'>${xml_alternatives[i].innerHTML}</label>`
         }
 
         return;
     }
 
-    function removeChilds(){
-        let elements = document.getElementById("answers")
-        
+    function removeChilds(){        
         question_number.innerHTML = ''
         question_title.innerHTML = ''
+        result.innerHTML = ''
 
-        while(elements.firstChild){
-            elements.removeChild(elements.firstChild)
+        while(answers.firstChild){
+            answers.removeChild(answers.firstChild)
         }
 
         return;
     }
 
-    function checkIsValid(){
+    function checkIsValid(response){
         btn_confirm.disabled = false;
+
+        answerCalculate(response)
     }
 
 
@@ -63,18 +65,19 @@ var current_question = 0
         
         current_question++
         
-        if(current_question > xml_number.length + 1){
+        score.push(answer_val)
+
+        if(current_question >= xml_questions.length){
             quizResult()
-            console.log(current_question)
+
             return;
         }
 
         removeChilds();
         createQuestion();
-
         btn_confirm.disabled = true;
 
-        return; 
+        return;
     }
 
     function createRestartBtn(){
@@ -84,9 +87,13 @@ var current_question = 0
         btn_restart = document.getElementById("btn_restart")
         btn_restart.innerHTML = "Reiniciar"
 
-        document.getElementById("btn_restart").addEventListener("click", ()=>{
+
+        btn_restart.addEventListener("click", ()=>{
+            score = []
+            removeChilds()
             restartQuiz()
-        })   
+        })
+
     }
 
     function createConfirmBtn(){
@@ -95,17 +102,30 @@ var current_question = 0
         btn_confirm.setAttribute('disabled','');
         btn_confirm.innerHTML = "Confirmar"
 
-        document.getElementById("btn_confirm").addEventListener("click", ()=>{
+        btn_confirm.addEventListener("click", ()=>{
             nextQuestion()
         })   
     }
-    function restartQuiz(){
-        current_question = 0
 
-        question_number.style = "display:block"
+    function restartQuiz(){
+        question_number.style   = "display:block";
+
+
+        current_question        = 0;
+
         btn_restart.remove()
-        createConfirmBtn()  
+        createConfirmBtn()
         createQuestion()
+    }
+
+    
+    
+    function answerCalculate(current_response){
+        const value = xml_alternatives[current_response].attributes[0].nodeValue
+        answer_val = value
+
+
+        console.log(answer_val)
     }
 
     function quizResult(){
@@ -113,9 +133,16 @@ var current_question = 0
         btn_confirm.remove()
         createRestartBtn()
         
+        score_value = score.filter(Boolean).length
 
+        console.log(score_value)
         question_number.style = "display:none"
         question_title.innerHTML = 'Sua pontuação foi de: '
+        result.innerHTML = `${score_value} + pontos`
+
+        if(score_value > 8){
+            result.innerHTML = 'Muito bom!'
+        }
 
 
     }

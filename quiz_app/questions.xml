@@ -41,4 +41,14 @@
             <d value="true">Acima de 4 Copas</d>
         </answers>
     </asks>
+    <asks>
+        <number>05</number>
+        <title>Qual a cor do oceano ?</title>
+        <answers>
+            <a value="false">Amarelo</a>
+            <b value="false">Roxo</b>
+            <c value="false">Preto</c>
+            <d value="true">Azul</d>
+        </answers>
+    </asks>
 </questions>
