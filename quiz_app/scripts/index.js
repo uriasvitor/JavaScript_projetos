@@ -9,7 +9,7 @@ var score           = []
 
 var current_question = 0
 
-    let url = "./questions.xml"
+    let url = "./questions/questions.xml"
 
     fetch(url).then((response)=>{
         return response.text()
@@ -87,7 +87,6 @@ var current_question = 0
         btn_restart = document.getElementById("btn_restart")
         btn_restart.innerHTML = "Reiniciar"
 
-
         btn_restart.addEventListener("click", ()=>{
             score = []
             removeChilds()
@@ -142,6 +141,5 @@ var current_question = 0
         if(corrects_answers.length > 6){
             result.appendChild(document.createElement("div")).innerHTML = 'Muito bom!'
         }
-
 
     }
