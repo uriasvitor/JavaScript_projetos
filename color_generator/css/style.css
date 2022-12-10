@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color:  #8ffff8;
+}
+
+.generator{
+    display         : flex;
+    align-items     : center;
+    flex-direction  : column;
+    justify-content : center;
+}
+
+.title{
+    color           :white;
+    margin-top      :  50px;
+    font-weight     :  600;
+    font-family     :  'Poppins', sans-serif;
+    text-shadow     :  4px 3px 1px crimson;
+    text-overflow   :  ellipsis;
+}
+
+.box-size{
+    width           : 80%;
+    height          : 100%;
+    margin-top      : 20px;
+    box-shadow      : 1px 1px 5px 1px #b8c6db;
+    border-radius   : 20px;
+    background-color: #F5F7FA;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+}
+
+#card-01, #card-02 ,#card-03 ,#card-04 {
+    width: 50%;
+    height: 500px;
+    text-align: center;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+#card-01{
+    border-radius: 20px 0 0 20px;
+}
+
+#card-04{
+    border-radius: 0 20px 20px 0;
+}
+
+span{
+    color: rgb(0, 0, 0);
+    font-size  : 20px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 20px #f5f7fa;
+}
+
+button{
+    color       : white;
+    border      : none;
+    width       : 200px;
+    height      : 40px;
+    font-size   : 20px;
+    box-shadow  : 1px 3px 8px 3px #00d4de;
+    font-weight : bold;
+    margin-top  : 60px;
+    text-shadow : 2px 1px 4px crimson;
+    font-family : 'Poppins', sans-serif;
+    border-radius: 6px;
+    background-color: rgb(0, 255, 98);
+}
+
+button:hover{
+    box-shadow  : 1px 3px 8px 3px #0051ff;
+    background-color: aqua;
+}
