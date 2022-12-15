@@ -1,13 +1,13 @@
-var question_number = document.getElementById("question_number")
-var question_title  = document.getElementById("title-question")
-var btn_confirm     = document.getElementById("btn_confirm")
-var controls        = document.querySelector(".controls")
-var answers         = document.getElementById("answers")
-var result          = document.getElementById("result")
-var answer_val      = ''
-var score           = []
+const question_number   = document.getElementById("question_number")
+const question_title    = document.getElementById("title-question")
+const controls          = document.querySelector(".controls")
+const answers           = document.getElementById("answers")
+const result            = document.getElementById("result")
+let btn_confirm         = document.getElementById("btn_confirm")
+let answer_val          = ''
+let score               = []
 
-var current_question = 0
+let current_question = 0
 
     let url = "./questions/questions.xml"
 
@@ -60,7 +60,6 @@ var current_question = 0
         answerCalculate(response)
     }
 
-
     function nextQuestion(){
         
         current_question++
@@ -81,7 +80,6 @@ var current_question = 0
     }
 
     function createRestartBtn(){
-
         controls.appendChild(document.createElement("button")).setAttribute("id", "btn_restart")
         
         btn_restart = document.getElementById("btn_restart")
@@ -108,7 +106,6 @@ var current_question = 0
 
     function restartQuiz(){
         question_number.style   = "display:block";
-
         current_question = 0;
 
         btn_restart.remove()
@@ -116,8 +113,6 @@ var current_question = 0
         createQuestion()
     }
 
-    
-    
     function answerCalculate(current_response){
         const value = xml_alternatives[current_response].attributes[0].nodeValue
         answer_val = value
