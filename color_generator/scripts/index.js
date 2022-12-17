@@ -1,7 +1,7 @@
-var btn_generate = document.getElementById("btn")
-var color_name = document.querySelectorAll(".hexa-color")
-var card_count = document.querySelector(".cards")
-var result = 0;
+const btn_generate = document.getElementById("btn")
+const color_name = document.querySelectorAll(".hexa-color")
+const card_count = document.querySelector(".cards")
+let result = 0;
     
 btn_generate.addEventListener("click",() =>{
     createColor()
