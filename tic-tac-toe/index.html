@@ -8,27 +8,21 @@
     <title>Tic-tac-toe</title>
 </head>
 <body>
-    <div class="tic-tac-toe">
-        <div class="draw">
-            <table>
-                <tr>
-                    <td id="01"></td>
-                    <td id="02"></td>
-                    <td id="03"></td>
-                </tr>
-                <tr>
-                    <td id="04"></td>
-                    <td id="05"></td>
-                    <td id="06"></td>
-                </tr>
-                <tr>
-                    <td id="07"></td>
-                    <td id="08"></td>
-                    <td id="09"></td>
-                </tr>
-            </table>
-            <button id="btn"></button>
-        </div>
+
+    <div class="board x" id="board"> 
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+    </div>
+    <div class="winning-message" id="winningMessage">
+        <div data-winning-message-text></div>
+        <button id="restartButton">Restart</button>
     </div>
 </body>
 <script src="./scripts/index.js"></script>
