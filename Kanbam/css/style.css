@@ -1,0 +1,231 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(87, 86, 86);
+}
+
+.kanbam{
+    padding: 30px;
+}
+
+h1{
+    text-align: center;
+    color: #fff;
+}
+
+.container{
+    display: flex;
+}
+
+/* Mudar quando for dinamico*/
+[class*='card-day']{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 580px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #FFD700;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.14) , 0px 3px 1px -2px rgba(0,0,0,0.12) , 0px 1px 5px 0px rgba(0,0,0,0.2);
+
+}
+
+.today{
+    border: 4px solid rgb(0, 255, 0);
+}
+
+[class*='title']{
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-bottom: 2px solid black;
+}
+
+[class*='title-task']{
+    font-size: 18px;
+    border-bottom: 1px solid black;
+    color: #fff;
+}
+
+[class*='card-info-']{
+    padding: 1px;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-bottom: 2px dotted black;
+}
+
+[class*='content']{
+    height: 70%;
+    border-bottom: 2px solid black;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+[class*='card-task']{
+    width: 250px;
+    height: 200px;
+    margin: 20px 0 20px 0;
+    background-color: rgb(161, 211, 252);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.14) , 0px 3px 1px -2px rgba(0,0,0,0.12) , 0px 1px 5px 0px rgba(0,0,0,0.2);
+    
+}
+
+p{
+    margin: 0;
+}
+/* Mudar quando for ficar dinamico */
+
+[class*='description']{
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+[class*='controls']{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+}
+
+[class*='card-control']{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+[class*='done-']{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    width: 80px;
+    margin-left: 20px;
+    height: 28px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.closed{
+    background-color: rgb(185, 185, 185);
+}
+
+[class*='remove-']{
+    display: flex;
+    background-color: rgb(255, 38, 0);
+    width: 50px;
+    height: 28px;
+    color: #fff;
+    font-size: 30px;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+[class*='open-form-'], [class*='add-card'], [class*='back']{
+    margin: 20px;
+    background-color: rgb(0, 255, 76);
+    width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 20px;
+}
+
+[class*='remove-all']{
+    display: flex;
+    margin: 20px;
+    width: 150px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    color: #ffff;
+    font-size: 20px;
+    background-color: rgb(255, 0, 98);
+    
+}
+
+[class*='open-form-'], [class*='remove-all'], [class*='remove'], [class*='done'], [class*='add-card'], [class*='back']{
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.14) , 0px 3px 1px -2px rgba(0,0,0,0.12) , 0px 1px 5px 0px rgba(0,0,0,0.2);
+} 
+
+[class*='open-form-']:hover, [class*='remove-all']:hover, [class*='remove']:hover, [class*='done']:hover, [class*='add-card']:hover, [class*='back']:hover{
+    cursor: pointer;
+    background-color: rgb(255, 136, 0);
+    color: rgb(255, 255, 255);
+} 
+
+.disabled{
+    display: none;
+}
+
+[class*='add-new-card']{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+[class*='add-new-card'].active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+label{
+    font-size: 20px;
+}
+
+input[type="text"]{
+    font-size: 15px;
+    background-color: #c9c9c9;
+    border-radius: 5px;
+    height: 30px;
+    color: black;
+}
+
+[class*='timeNow']{
+    margin-bottom: 10px;
+}
+
+.readOnly [class*='open-form-'], .readOnly [class*='remove-all'], .readOnly [class*='card-day']{
+    background-color: #c9c9c9;
+    cursor: not-allowed;
+}
+
+.readOnly:hover [class*='open-form-'] [class*='remove-all']:hover{
+    cursor: not-allowed;
+
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-top: 50px;
+}
+

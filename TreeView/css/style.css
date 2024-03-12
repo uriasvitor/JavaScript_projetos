@@ -1,0 +1,113 @@
+body{
+    margin: 0;
+    background-color: black;
+}
+
+h1,p,span,div{
+    color: #ffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffee00;
+}
+
+.app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.parent-control{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(153, 0, 255);
+    padding: 10px;
+}
+
+.tree{
+    width: 100%;
+    display: flex;
+    border: 2px solid black;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(153, 0, 255);
+}
+
+.parent-section{
+    padding: 10px;
+    flex-direction: column;
+    display: flex;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.562);
+}
+
+.node-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inner-content{
+    display: flex;
+}
+
+.children-section{
+    display: flex;
+    margin:12px 0 0 40px ;
+    flex-direction: column;
+}
+
+
+.add-main-parent, .add-children{
+    width: 60px;
+    font-size: 20px;
+    background-color: #ffffff;
+    outline: none;
+    border: none;
+    cursor:pointer;
+}
+
+.hide-childrenButton{
+    width: 30px;
+    font-size: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    outline: none;
+    border: none;
+    cursor:pointer;
+}
+
+.hide-childrenButton:hover{
+    background-color: #9b9b9b;
+    color: #ffff;
+}
+
+.hide{
+    display: none;
+}
+
+.treeline{
+    position: absolute;
+    height: 40px;
+    width: 2px;
+    background: #fff;
+    transform: translate(-26px, -9px);
+}
+
+.intersectionline{
+    position: absolute;
+    height: 26px;
+    width: 2px;
+    background: #fff;
+    transform: rotate(90deg)translate(0px, 14px);
+}
