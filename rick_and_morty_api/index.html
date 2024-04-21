@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Rick and morty</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="title">
+            <h1>Rick And Morty Search</h1>
+        </div>
+        
+        <div class="section-search">
+            <select name="character" id="character">
+                <option value="0">Sobre quem você quer saber?</option>
+            </select>
+        </div>
+        <div class="section-cards">
+          <div class="card">
+            <div class="card__img">
+              <img id="char-image" alt=""/>
+            </div>
+            <div class="card__content">
+              <div class="section">
+                <h2 class="char-name" data-charName></h2>
+
+                <div class="char-status">
+                  <span class="status__icon" data-iconStatus></span>
+                  <span class="status" data-status></span>
+                </div>
+              </div>
+              <div class="section">
+                <span class="text-gray">Last known location:</span>
+                <div class="location result" data-location></div>
+              </div>
+              <div class="section">
+                <span class="text-gray">First seen in:</span>
+                <div class="first-seen result" data-firstseen ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="moreinfo">
+          <div class="section-seeEps">
+              <div class="seeEps" data-epCollapse>
+                  <p>Ver epsódios</p>
+                  <img src="./assets/arrow-icon.png">
+              </div>
+
+              <div class="content" hidden>
+                <ul class="episodes" data-episodes></ul>
+              </div>
+          </div>
+
+          <div class="section-meetNeighbors">
+              <div class="seeNeighbors">
+                  <p>Conhecer os vizinhos</p>
+                  <img src="./assets/arrow-icon.png">
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./scripts/index.js"></script>
+</html>
